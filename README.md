@@ -19,12 +19,6 @@ La aplicación cuenta con las siguientes funcionalidades:
     *   Permite ingresar un nuevo patrón de entrada manualmente para probar la capacidad de generalización del modelo.
 *   **Logging**: Un panel de logs registra todas las acciones importantes realizadas en la aplicación, como la carga de datos, la inicialización del modelo, el estado del entrenamiento y los resultados de las simulaciones.
 
-## Capturas de Pantalla
-
-*(Aquí puedes añadir capturas de pantalla de la interfaz en funcionamiento)*
-
-![Placeholder para la GUI](https://via.placeholder.com/800x600.png?text=Interfaz+de+la+Aplicación)
-
 ## Estructura del Proyecto
 
 El código está organizado de forma modular para separar las responsabilidades:
