@@ -292,7 +292,7 @@ class App(tk.Tk):
             self.sim_pattern_combobox['values'] = []
             return
 
-        patterns_str = [f"Entradas: {list(row)}, Salida esperada: {self.y[i]}" for i, row in enumerate(self.X)]
+        patterns_str = [f"Entradas: {row.tolist()}, Salida esperada: {self.y[i]}" for i, row in enumerate(self.X)]
         self.sim_pattern_combobox['values'] = patterns_str
         if patterns_str:
             self.sim_pattern_combobox.current(0)
@@ -314,7 +314,7 @@ class App(tk.Tk):
             expected_y = self.y[selected_index]
             predicted_y = self.perceptron.predict(pattern)
 
-            result_text = f"Resultado: Para la entrada {list(pattern)}, la predicción es {predicted_y} (esperada: {expected_y})."
+            result_text = f"Resultado: Para la entrada {pattern.tolist()}, la predicción es {predicted_y} (esperada: {expected_y})."
             self.sim_result_label.config(text=result_text)
             self.log(f"Simulación de patrón conocido: {result_text}")
         except Exception as e:
@@ -342,7 +342,7 @@ class App(tk.Tk):
                 return
 
             predicted_y = self.perceptron.predict(pattern)
-            result_text = f"Resultado: Para la entrada manual {list(pattern)}, la predicción es {predicted_y}."
+            result_text = f"Resultado: Para la entrada manual {pattern.tolist()}, la predicción es {predicted_y}."
             self.sim_result_label.config(text=result_text)
             self.log(f"Simulación de patrón manual: {result_text}")
         except Exception as e:
