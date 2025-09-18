@@ -2,6 +2,7 @@ import numpy as np
 
 class Perceptron:
     def __init__(self, input_size: int, learning_rate: float = 0.1, threshold: float = 0.0):
+        # INICIALIZACIÓN DE PESOS Y SESGO ALEATORIOS
         self.weights = np.random.uniform(-1, 1, input_size)
         self.bias = np.random.uniform(-1, 1)
         self.learning_rate = learning_rate
